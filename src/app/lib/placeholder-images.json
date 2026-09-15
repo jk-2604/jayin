@@ -1,0 +1,16 @@
+
+{
+  "experience": {
+    "aiisc": {
+      "url": "https://picsum.photos/seed/aiisc/200/100",
+      "hint": "university research lab"
+    }
+  },
+  "hobbies": {
+    "running": [
+      "https://picsum.photos/seed/running1/400/300",
+      "https://picsum.photos/seed/running2/400/300",
+      "https://picsum.photos/seed/running3/400/300"
+    ]
+  }
+}
