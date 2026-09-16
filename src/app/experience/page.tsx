@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { motion } from 'framer-motion';
 import { GraduationCap, CalendarDays } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import ExperienceCarousel from '@/components/experience/ExperienceCarousel';
@@ -186,25 +185,6 @@ const experienceData = [
 
 export type ExperienceItem = typeof experienceData[0];
 
-const sectionAnimationProps = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.2 },
-  transition: { duration: 0.6, ease: "easeInOut" },
-};
-
-const cardVariants = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.2 },
-  transition: {
-    delay: 0.1,
-    duration: 0.5,
-    ease: "easeInOut",
-  },
-};
-
-
 const ExperiencePageContent = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [currentExperience, setCurrentExperience] = useState<ExperienceItem | null>(null);
@@ -217,18 +197,10 @@ const ExperiencePageContent = () => {
 
   const renderGrid = () => (
     <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {experienceData.map((exp, index) => (
-        <motion.div
-          key={exp.id}
-          custom={index}
-          variants={cardVariants}
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true, amount: 0.2 }}
-          className="h-full flex flex-col"
-        >
+      {experienceData.map((exp) => (
+        <div key={exp.id} className="h-full flex flex-col">
           {renderCard(exp)}
-        </motion.div>
+        </div>
       ))}
     </div>
   );
@@ -288,9 +260,9 @@ const ExperiencePageContent = () => {
 
   return (
     <div id="experience-section" className="container mx-auto px-4 py-12 md:py-20">
-      <motion.header {...sectionAnimationProps} className="text-center mb-16">
+      <header className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-headline mb-4">My Experience</h1>
-      </motion.header>
+      </header>
 
       {isMobile === undefined ? (
         <div className="text-center py-10">Loading...</div>
