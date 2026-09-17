@@ -13,6 +13,14 @@ const academicData = [
     links: [],
   },
   {
+    id: 'ad_ieee_ic_reviewer',
+    title: 'Reviewer, IEEE Internet Computing',
+    subtitle: 'IEEE Computer Society',
+    period: null,
+    bullets: [],
+    links: [],
+  },
+  {
     id: 'ad_polymath',
     title: 'Polymath Jr, Summer Research Intern',
     subtitle: null,
@@ -86,15 +94,16 @@ const AcademicDevelopmentPage = () => {
         <h1 className="text-4xl md:text-5xl font-headline mb-4">Academic Development</h1>
       </motion.header>
 
-      <div className="max-w-3xl mx-auto space-y-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
         {academicData.map((item, index) => (
           <motion.div
             key={item.id}
+            id={item.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: index * 0.06 }}
-            className="border border-primary/40 rounded-xl p-5 bg-card"
+            className="border border-primary/40 rounded-xl p-5 bg-card scroll-mt-24 h-full flex flex-col"
           >
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
               <h2 className="text-base font-semibold text-foreground leading-snug">

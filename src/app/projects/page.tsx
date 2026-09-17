@@ -30,6 +30,19 @@ const projectsData = [
     ],
   },
   {
+    slug: 'semg-cnn-classification',
+    title: 'Preprocessing Pipeline and Application of CNNs for Surface Electromyography (sEMG) Signal Classification',
+    year: 'Jun – Dec 2025',
+    supervisorName: 'Dr. Shilpi Modi, Sc.’E’',
+    supervisorLink: 'https://www.researchgate.net/profile/Shilpi-Modi',
+    bullets: [
+      'Achieved 98% accuracy by developing a ResNet, CNNs to classify surface electromyography (sEMG) stress measurements.',
+      'Improved classification performance from 91% to 97.98% through architecture redesign and training, showing raw sEMG inputs outperform PyEMGPipeline preprocessing.',
+      'Implemented AlexNet alongside ResNet experiments to further refine accuracy and generalization across sEMG datasets.',
+      'Selected to present this research on stress-level classification at the SUMMIT 2.0 Conference.',
+    ],
+  },
+  {
     slug: 'financial-markets-time-series-sentiment',
     title: 'Time Series and Sentiment Analysis in US Financial Markets using Deep Learning',
     year: '2024–2025',
@@ -52,19 +65,6 @@ const projectsData = [
       'Combined facial expression recognition, RoBERTa-based transcript analysis, and tabular neural networks for financial characteristics, with cross-modal attention to model investor behavior',
       'Fine-tuned EmotioNet for facial expression recognition and RoBERTa for transcript analysis',
       'Generated time-series investment likelihood scores (\u20131 to 1) for each second, validated through accuracy of final decision',
-    ],
-  },
-  {
-    slug: 'mri-motion-correction-dl',
-    title: 'OUR: MRI Motion Correction using Deep Learning Models',
-    year: '2024–2025',
-    supervisorName: 'Dr. Saurabh Janardan Shigwan',
-    supervisorLink: null,
-    bullets: [
-      'Developing deep learning models to correct MRI motion artifacts in real-time using k-space data',
-      'Using image processing and computer vision techniques alongside deep learning for motion artifact correction',
-      'Exploring regression techniques and CNNs to improve motion estimation and reduce re-scanning',
-      'Aiming to enhance image quality and diagnostic accuracy without requiring image reconstruction',
     ],
   },
 ];

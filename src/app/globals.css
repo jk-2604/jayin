@@ -8,19 +8,19 @@
     --background: 248 28% 96%; /* Subtle blue-lavender, academic paper tone */
     --foreground: 240 25% 18%; /* Dark ink navy */
 
-    --card: 248 30% 99%;
+    --card: 250 26% 91%; /* Slightly darker purple to set sections apart */
     --card-foreground: 240 25% 18%;
 
-    --popover: 248 30% 99%;
+    --popover: 250 26% 91%;
     --popover-foreground: 240 25% 18%;
 
     --primary: 252 26% 40%; /* Muted academic indigo/purple */
     --primary-foreground: 250 40% 98%;
 
-    --secondary: 248 22% 91%;
+    --secondary: 250 24% 89%;
     --secondary-foreground: 240 25% 18%;
 
-    --muted: 248 20% 92%;
+    --muted: 250 22% 90%;
     --muted-foreground: 240 10% 42%;
 
     --accent: 252 26% 40%;
@@ -56,19 +56,19 @@
     --background: 240 22% 10%; /* Subtle dark blue-purple, not pure black */
     --foreground: 248 20% 92%;
 
-    --card: 240 20% 13%;
+    --card: 251 30% 15%; /* Darker, more saturated purple for sections */
     --card-foreground: 248 20% 92%;
 
-    --popover: 240 20% 13%;
+    --popover: 251 30% 15%;
     --popover-foreground: 248 20% 92%;
 
     --primary: 252 40% 68%;
     --primary-foreground: 252 30% 12%;
 
-    --secondary: 240 15% 18%;
+    --secondary: 251 26% 17%;
     --secondary-foreground: 248 20% 92%;
 
-    --muted: 240 15% 18%;
+    --muted: 251 24% 17%;
     --muted-foreground: 240 10% 65%;
 
     --accent: 252 40% 68%;
@@ -163,6 +163,12 @@
   }
   .embla__dot--selected {
     @apply bg-primary;
+  }
+}
+
+@layer utilities {
+  .text-gradient-dreams {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-400 via-lime-400 via-sky-400 to-pink-500;
   }
 }
 

@@ -6,7 +6,6 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { SearchModalProvider } from '@/contexts/SearchModalContext';
 import GlobalSearchModalListener from '@/components/search/GlobalSearchModalListener';
-import CalendlyButton from '@/components/shared/CalendlyButton';
 import { Inter, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import { GA_TRACKING_ID } from '@/lib/gtag';
@@ -76,7 +75,6 @@ export default function RootLayout({
               {children}
             </div>
             <Footer /> {/* ScrollToTopButton is inside Footer */}
-            <CalendlyButton /> {/* Add Calendly button here */}
             <Toaster />
           </SearchModalProvider>
         </ThemeProvider>

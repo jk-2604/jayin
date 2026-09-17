@@ -1,10 +1,21 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const resources = [
   { slug: 'trce-paper-presentation', title: 'TRCE Paper Presentation' },
   { slug: 'csd722-depth-video-gen', title: 'CSD 722 Project presentation: Depth Conditioned Video Generation' },
+];
+
+const summaryPoint =
+  'Designed SCFM, a training-free safety-alignment method for pretrained T2I diffusion models that steers denoising toward safer generations at inference time via safety-potential-guided rectified flow matching in frozen CLIP embedding space';
+
+const detailPoints = [
+  'Learned a lightweight velocity field that captures the unsafe to safe direction in embedding space while using a safety potential to repel trajectories from harmful dense regions; validated via parallel encoder ablations (CLIP, BLIP-ITM, EVA-CLIP-8B) and inference-time guidance tuning across 7 harm categories from the I2P and DETONATE benchmarks.',
+  'Extending the formulation with Riemannian flow matching to respect the geometry of the embedding manifold better',
+  'Developing a neurosymbolic scene-graph extension to steer generation using relational structure between objects, enabling safety alignment at the level of scene semantics rather than holistic image content.',
 ];
 
 const sectionAnimationProps = {
@@ -15,6 +26,8 @@ const sectionAnimationProps = {
 };
 
 const SafetyAlignmentPage = () => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div className="container mx-auto px-4 py-12 md:py-20 max-w-5xl">
       <motion.header
@@ -28,20 +41,25 @@ const SafetyAlignmentPage = () => {
         </Link>
         <h1 className="text-4xl md:text-5xl font-headline mb-4">Alignment &amp; Safety in T2I and T2V Models</h1>
         <div className="text-lg text-foreground/85 leading-relaxed max-w-3xl space-y-3">
-          <p>
-            Working on safety alignment of Text-to-Image &amp; T2V diffusion and flow matching
-            models using a neurosymbolic approach called scene graphs.
-          </p>
-          <ul className="list-disc pl-5 space-y-1.5 text-base">
-            <li>
-              Developing a novel methodology to reduce hate content in T2I Diffusion models using
-              a safety potential-guided rectified flow matching in the CLIP embedding space.
-            </li>
-            <li>
-              Benchmarked debiasing and safety methodologies — TRCE, CURE, SAEUron, and DoCo — on
-              lab&apos;s DETONATE dataset.
-            </li>
-          </ul>
+          <p>{summaryPoint}</p>
+
+          {expanded && (
+            <ul className="list-disc pl-5 space-y-1.5 text-base">
+              {detailPoints.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          )}
+
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+            aria-expanded={expanded}
+          >
+            {expanded ? 'Show less' : 'Show more'}
+            <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+          </button>
         </div>
       </motion.header>
 

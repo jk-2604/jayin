@@ -1,10 +1,9 @@
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/academic-development', label: 'Academic Development' },
   { href: '/articles', label: 'Research' },
   { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact Me' },
-  { href: '/resume', label: 'CV' },
+  { href: '/academic-development', label: 'Academic Development' },
+  { href: '/achievements', label: 'Achievements' },
 ];
 
 export const SOCIAL_LINKS = {

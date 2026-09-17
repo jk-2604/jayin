@@ -17,19 +17,23 @@ const AboutIntro = () => {
     <div>
       {/* Hero: photo left, name + intro right */}
       <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8 md:gap-12 items-start">
-        <div className="relative w-full max-w-[220px] aspect-[3/4] mx-auto md:mx-0 overflow-hidden rounded-md border border-border bg-muted">
-          <Image
-            src="/images/my-photo.jpeg"
-            alt="Jayin Khanna"
-            fill
-            className="object-cover"
-            data-ai-hint="professional portrait"
-          />
+        <div className="mx-auto md:mx-0 max-w-[220px] w-full">
+          <div className="relative w-full aspect-[3/4] overflow-hidden rounded-md border border-border bg-muted">
+            <Image
+              src="/images/my-photo.jpeg"
+              alt="Jayin Khanna"
+              fill
+              className="object-cover"
+              data-ai-hint="professional portrait"
+            />
+          </div>
+          <p className="text-center text-sm font-headline font-bold tracking-wider text-gradient-dreams mt-3">
+            A HEAD FULL OF DREAMS
+          </p>
         </div>
 
         <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-headline text-foreground mb-1">Jayin Khanna</h1>
-          <p className="text-xl md:text-2xl font-headline italic text-primary mb-6">A Headful of Dreams</p>
+          <h1 className="text-4xl md:text-5xl font-headline text-foreground mb-6">Jayin Khanna</h1>
 
           <div className="space-y-4 text-base md:text-lg text-foreground/90">
             <p>
@@ -38,15 +42,43 @@ const AboutIntro = () => {
               Science from IIT Madras.
             </p>
             <p>
-              I work on{' '}
-              <span className="text-primary font-medium">interpretability, alignment, and safety</span>{' '}
-              in{' '}
-              <span className="text-primary font-medium">generative models</span>{' '}
-              and{' '}
-              <span className="text-primary font-medium">LLMs</span>{' '}
-              — with a mathematical bias toward understanding why methods work before scaling
-              them. My current focus is safety alignment in text-to-image/video diffusion and
-              trustworthiness repair in fine-tuned LLMs.
+              I am currently working as a Project Associate at the{' '}
+              <a
+                href="https://prathosh.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline"
+              >
+                Deep Representation Learning Lab, IISc
+              </a>{' '}
+              (
+              <a
+                href="https://prathosh.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline"
+              >
+                Dr. Prathosh A. P.
+              </a>
+              )
+            </p>
+            <div>
+              <p>My current research interests are in</p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>
+                  <span className="text-primary font-medium">Generative models</span> (Diffusion
+                  and Flow matching) — their applications and core theory.
+                </li>
+                <li>
+                  <span className="text-primary font-medium">Interpretability, alignment &amp; safety</span>{' '}
+                  in <span className="text-primary font-medium">LLMs</span>
+                </li>
+              </ul>
+            </div>
+            <p>
+              I am more interested in developing a theory of Deep Learning and understanding why
+              methods work before scaling them. My current work is on safety alignment in
+              text-to-image/video diffusion and trustworthiness repair in fine-tuned LLMs.
             </p>
             <p>
               I&apos;m looking for a long-term research project aimed at publication at ICLR,
@@ -193,7 +225,7 @@ const AboutIntro = () => {
         </div>
 
         <div className="border border-border rounded-md p-5 bg-card">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary/80 mb-3">Exploring</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary/80 mb-3">Exploring and Self Reading</p>
           <ul className="list-disc pl-5 space-y-1.5 text-foreground/80 text-base">
             <li>Theory of Deep Learning <span className="text-muted-foreground text-sm">(slow steady reading)</span></li>
             <li>Mechanistic Interpretability</li>
@@ -236,12 +268,39 @@ const AboutIntro = () => {
         <div>
           <p className="mb-2">My prior research spans:</p>
           <ul className="list-disc pl-5 space-y-1.5 text-foreground/85">
-            <li>Generative models for Unsupervised TSM</li>
-            <li>Depth-Conditioned Video Generation using ControlNet &amp; AnimateDiff</li>
-            <li>Attribution/interpretability methods (IIT Kharagpur, Prof. Niloy Ganguly)</li>
-            <li>Developing ML models for sEMG at DRDO-INMAS</li>
+            <li>
+              <Link href="/articles/ug-thesis" className="text-primary font-medium hover:underline">
+                Generative models for Unsupervised TSM (UG Thesis)
+              </Link>
+            </li>
+            <li>
+              <Link href="/articles/csd722-depth-video-gen/" className="text-primary font-medium hover:underline">
+                Depth-Conditioned Video Generation using ControlNet &amp; AnimateDiff
+              </Link>
+            </li>
+            <li>
+              <Link href="/articles/interpretability-theory" className="text-primary font-medium hover:underline">
+                Attribution/interpretability methods
+              </Link>{' '}
+              (IIT Kharagpur, Prof. Niloy Ganguly)
+            </li>
+            <li>
+              <Link href="/projects/semg-cnn-classification/" className="text-primary font-medium hover:underline">
+                Developing ML models for sEMG
+              </Link>{' '}
+              at DRDO-INMAS
+            </li>
             <li>Statistical time-series modeling (UC Santa Cruz ISRP, Prof. Bruno Sansó)</li>
-            <li>Summer research programs: MTTS 2024 and Polymath Jr. 2024, 2025</li>
+            <li>
+              Summer research programs:{' '}
+              <Link href="/academic-development#ad_mtts" className="text-primary font-medium hover:underline">
+                MTTS 2024
+              </Link>{' '}
+              and{' '}
+              <Link href="/academic-development#ad_polymath" className="text-primary font-medium hover:underline">
+                Polymath Jr. 2024, 2025
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -257,14 +316,6 @@ const AboutIntro = () => {
           .
         </p>
 
-        <p>
-          If you have cool project ideas, or want to discuss thought experiments or ideologies —
-          regardless of the domain — and want to collaborate,{' '}
-          <Link href="/contact" className="text-primary font-medium hover:underline">
-            ping me
-          </Link>
-          ! I am always looking forward to interesting stuff!
-        </p>
       </div>
 
       <div className="mt-10 flex justify-center md:justify-start">

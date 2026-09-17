@@ -116,6 +116,54 @@ async function getProjectData(slug: string): Promise<Project | null> {
       shortAbstract: ""
     },
     {
+      slug: 'fwi-seismic-velocity-prediction',
+      title: 'Full-Waveform Inversion for Seismic Velocity Prediction',
+      year: 'Ongoing',
+      supervisorName: 'Naveen Gupta & Divakar Vashisth',
+      tags: ['#FWI', '#SeismicImaging', '#DiffusionModels', '#FlowMatching', '#OptimalTransport'],
+      fullWriteUp: `
+        <ul class="list-disc pl-6">
+          <li>Extending advisor’s ICLR 2025 latent-space-translation framework for subsurface forward/inverse problem to using Diffusion priors and flow matching.</li>
+          <li>Working on optimal-transport-based misfit functions (Wasserstein distance, unbalanced OT) as an alternative for L2 loss to mitigate cycle-skipping on Marmousi/Overthrust benchmarks.</li>
+          <li>Literature survey on diffusion- and flow-matching-based generative priors as regularizers for Bayesian FWI.</li>
+        </ul>`,
+      paperLink: null, githubLink: null, datasetLink: null,
+      shortAbstract: ''
+    },
+    {
+      slug: 'csd722-depth-video-gen',
+      title: 'CSD722 Project: Depth-Conditioned Video Generation using ControlNet & AnimateDiff',
+      year: 'Jan – May 2026',
+      supervisorName: 'Dr. Sumit Shekhar & Dr. Saurabh Shigwan (CSE Dept, SNU)',
+      tags: ['#ControlNet', '#AnimateDiff', '#VideoGeneration', '#DepthConditioning', '#DiffusionModels'],
+      fullWriteUp: `
+        <ul class="list-disc pl-6">
+          <li>Extended ControlNet to text-to-video diffusion models using AnimateDiff and Motion LoRA.</li>
+          <li>Modified model architecture to prevent training collapse where generated videos ignored depth-map conditioning; stabilized training by adding auxiliary supervision losses.</li>
+          <li>Conducted ablation experiments on prompts, depth conditioning, and text guidance.</li>
+        </ul>`,
+      paperLink: null, githubLink: null, datasetLink: null,
+      shortAbstract: ''
+    },
+    {
+      slug: 'semg-cnn-classification',
+      title: 'Preprocessing Pipeline and Application of CNNs for Surface Electromyography (sEMG) Signal Classification',
+      year: 'Jun – Dec 2025',
+      supervisorName: 'Dr. Shilpi Modi, Sc.’E’',
+      supervisorLink: 'https://www.researchgate.net/profile/Shilpi-Modi',
+      tags: ['#sEMG', '#CNN', '#ResNet', '#AlexNet', '#SignalClassification', '#DRDO'],
+      fullWriteUp: `
+        <p class="text-sm text-muted-foreground mb-3">Institute of Nuclear Medicine and Allied Sciences-DRDO, Ministry of Defence &middot; Machine Learning Research Intern</p>
+        <ul class="list-disc pl-6">
+          <li>Achieved 98% accuracy by developing a ResNet, CNNs to classify surface electromyography (sEMG) stress measurements.</li>
+          <li>Improved classification performance from 91% to 97.98% through architecture redesign and training, showing raw sEMG inputs outperform PyEMGPipeline preprocessing.</li>
+          <li>Implemented AlexNet alongside ResNet experiments to further refine accuracy and generalization across sEMG datasets.</li>
+          <li>Selected to present this research on stress-level classification at the SUMMIT 2.0 Conference.</li>
+        </ul>`,
+      paperLink: null, githubLink: null, datasetLink: null,
+      shortAbstract: ''
+    },
+    {
       slug: 'nidar-drone-challenge',
       title: 'NIDAR Drone Innovation Challenge: Perception and Autonomy',
       year: 'Ongoing',
@@ -250,6 +298,9 @@ export async function generateStaticParams() {
     'filtering-recommendation-model',
     'self-directed-learning-advanced-ai',
     'project-alpha',
+    'fwi-seismic-velocity-prediction',
+    'csd722-depth-video-gen',
+    'semg-cnn-classification',
     'nidar-drone-challenge'
   ];
   return projectSlugs.map(slug => ({ slug }));
