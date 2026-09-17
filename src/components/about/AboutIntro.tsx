@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, Mail, FileText, Linkedin, Github, NotebookText } from 'lucide-react';
 import { SOCIAL_LINKS } from '@/lib/constants';
+import { withBasePath } from '@/lib/utils';
 
 const contactLinks = [
   { label: 'Email', href: SOCIAL_LINKS.email, icon: Mail },
@@ -20,7 +21,7 @@ const AboutIntro = () => {
         <div className="mx-auto md:mx-0 max-w-[220px] w-full">
           <div className="relative w-full aspect-[3/4] overflow-hidden rounded-md border border-border bg-muted">
             <Image
-              src="/images/my-photo.jpeg"
+              src={withBasePath('/images/my-photo.jpeg')}
               alt="Jayin Khanna"
               fill
               className="object-cover"

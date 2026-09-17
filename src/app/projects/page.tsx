@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
+import { withBasePath } from "@/lib/utils";
 
 const projectsData = [
   {
@@ -153,7 +154,7 @@ const ProjectsPage = () => {
                       {resource.title}
                     </span>
                     <a
-                      href={resource.href}
+                      href={withBasePath(resource.href)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary text-sm font-medium hover:underline underline-offset-4"

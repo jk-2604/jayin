@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { withBasePath } from "@/lib/utils";
 
 interface ArticleContent {
   slug: string;
@@ -314,14 +315,14 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
           </h2>
           <div className="relative w-full" style={{ paddingTop: '141.42%' }}>
             <iframe
-              src={article.pdfSrc}
+              src={withBasePath(article.pdfSrc)}
               className="absolute top-0 left-0 w-full h-full border rounded-lg shadow-md"
               title={article.title + " - PDF Document"}
               aria-label={article.title + " - PDF Document"}
             >
               <p className="p-4 text-muted-foreground">
                 Your browser does not support embedded PDFs.{' '}
-                <a href={article.pdfSrc} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                <a href={withBasePath(article.pdfSrc)} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
                   Download the PDF directly
                 </a>.
               </p>
@@ -329,7 +330,7 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
           </div>
           <div className="text-center mt-6">
             <a
-              href={article.pdfSrc}
+              href={withBasePath(article.pdfSrc)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 font-medium"

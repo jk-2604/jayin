@@ -10,6 +10,7 @@ import { GraduationCap, CalendarDays } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import ExperienceCarousel from '@/components/experience/ExperienceCarousel';
 import placeholderImages from '@/app/lib/placeholder-images.json';
+import { withBasePath } from '@/lib/utils';
 
 const experienceData = [
   {
@@ -214,7 +215,7 @@ const ExperiencePageContent = () => {
           {exp.logoSrc && (
             <div className="flex-shrink-0 pt-1">
               <Image
-                src={exp.logoSrc}
+                src={withBasePath(exp.logoSrc)}
                 alt={exp.logoAlt || `${exp.institution} logo`}
                 width={80}
                 height={40}
@@ -281,7 +282,7 @@ const ExperiencePageContent = () => {
                 {currentExperience.logoSrc && (
                   <div className="flex-shrink-0 pt-1">
                     <Image
-                      src={currentExperience.logoSrc}
+                      src={withBasePath(currentExperience.logoSrc)}
                       alt={currentExperience.logoAlt || `${currentExperience.institution} logo`}
                       width={100}
                       height={50}
