@@ -16,6 +16,9 @@ const projectsData = [
       'Working on optimal-transport-based misfit functions (Wasserstein distance, unbalanced OT) as an alternative for L2 loss to mitigate cycle-skipping on Marmousi/Overthrust benchmarks',
       'Literature survey on diffusion- and flow-matching-based generative priors as regularizers for Bayesian FWI',
     ],
+    resources: [
+      { title: 'FWI Notes', href: '/reports/fwi_notes.pdf' },
+    ],
   },
   {
     slug: 'csd722-depth-video-gen',
@@ -137,6 +140,30 @@ const ProjectsPage = () => {
                 <li key={i}>{bullet}</li>
               ))}
             </ul>
+
+            {/* Resources */}
+            {'resources' in project && project.resources && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                {project.resources.map((resource) => (
+                  <div
+                    key={resource.title}
+                    className="border border-border/40 rounded-lg p-4 hover:border-primary/60 transition-all duration-300 bg-background flex flex-col"
+                  >
+                    <span className="text-sm font-medium text-foreground/90 mb-2 flex-1">
+                      {resource.title}
+                    </span>
+                    <a
+                      href={resource.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary text-sm font-medium hover:underline underline-offset-4"
+                    >
+                      View &rarr;
+                    </a>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Link */}
             <Link

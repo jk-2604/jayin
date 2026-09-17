@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const resources = [
+  { slug: 'enhancing-trust-llms-notes', title: 'Enhancing trust in LLMs notes' },
   { slug: 'explainable-ai', title: 'Explainable AI: Attribution Techniques' },
   { slug: 'theory-of-llms-notes', title: 'Theory of LLMs — Notion Notes' },
 ];

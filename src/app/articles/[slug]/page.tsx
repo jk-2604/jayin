@@ -19,6 +19,14 @@ interface ArticleContent {
 
 const allArticlesContent: ArticleContent[] = [
   {
+    slug: 'enhancing-trust-llms-notes',
+    title: 'Enhancing trust in LLMs notes',
+    pageTitle: 'Enhancing trust in LLMs notes',
+    metadataLine: 'By Jayin Khanna | Research Notes',
+    pdfSrc: '/reports/enhancing_trustworthiness_notes.pdf',
+    fullWriteUp: `<p>Notes on the post-hoc trustworthiness repair method for distilled LLMs — EK-FAC-preconditioned gradient ascent with PBRF curvature correction, surrogate proxy datasets, and the odds-ratio preference objective.</p>`,
+  },
+  {
     slug: 'theory-of-llms-notes',
     title: 'Theory of LLMs — Notion Notes',
     pageTitle: 'Theory of LLMs — Notion Notes',

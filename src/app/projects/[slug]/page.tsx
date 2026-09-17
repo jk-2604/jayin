@@ -14,7 +14,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       year: "2024-2025",
       supervisorName: "Dr. Saurabh Janardan Shigwan",
       supervisorLink: "#", 
-      tags: ['#UDA', '#MedicalImaging', '#CT', '#MRI', '#DeepLearning', '#Research'],
+      tags: ['UDA', 'MedicalImaging', 'CT', 'MRI', 'DeepLearning', 'Research'],
       fullWriteUp: `
         <ul class="list-disc pl-6">
           <li>Conducting Research on Unsupervised Domain Adaptation (UDA) Techniques for Medical Imaging Applications in CT and MRI.</li>
@@ -31,7 +31,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       year: "2024-2025",
       supervisorName: "Dr. Ashish Vazirani",
       supervisorLink: "#", 
-      tags: ['#DeepLearning', '#OpenCV', '#NLP', '#EmotionRecognition', '#SentimentAnalysis', '#Research'],
+      tags: ['DeepLearning', 'OpenCV', 'NLP', 'EmotionRecognition', 'SentimentAnalysis', 'Research'],
       fullWriteUp: `
         <ul class="list-disc pl-6">
           <li>Developed a Deep Learning and OpenCV-based framework to analyze investor emotions, stance, and decision-making patterns in Shark Tank videos.</li>
@@ -47,7 +47,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       year: "2024-2025",
       supervisorName: "Dr. Charu Sharma (Mathematics Dept, SNU)",
       supervisorLink: "https://snu.edu.in/faculty/charu-sharma/", 
-      tags: ['#TimeSeries', '#SentimentAnalysis', '#FinancialMarkets', '#DeepLearning', '#ML', '#Research'],
+      tags: ['TimeSeries', 'SentimentAnalysis', 'FinancialMarkets', 'DeepLearning', 'ML', 'Research'],
       fullWriteUp: `
         <ul class="list-disc pl-6">
           <li>Analyzing Time series Patterns and sentiment in US financial markets.</li>
@@ -61,7 +61,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       slug: 'filtering-recommendation-model',
       title: 'Filtering-Based Recommendation ML Model',
       year: "2024",
-      tags: ['#RecommendationSystem', '#ML', '#CosineSimilarity', '#Ideathon'],
+      tags: ['RecommendationSystem', 'ML', 'CosineSimilarity', 'Ideathon'],
       fullWriteUp: `
         <ul class="list-disc pl-6">
           <li>Developed a recommendation system using Cosine Similarity and Pearson correlation for Capital Connect, a matchmaking platform for investors and startups.</li>
@@ -74,7 +74,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       slug: 'self-directed-learning-advanced-ai',
       title: 'Self-Directed Learning: Advanced AI Implementations',
       year: "Ongoing",
-      tags: ['#LLMs', '#NeuralTemporalPointProcesses', '#Dehazing', '#ComputerVision', '#GameAI'],
+      tags: ['LLMs', 'NeuralTemporalPointProcesses', 'Dehazing', 'ComputerVision', 'GameAI'],
       fullWriteUp: `
         <h4 class="font-semibold mt-3">Reading Projects:</h4>
         <ul class="list-disc pl-6">
@@ -95,7 +95,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       slug: 'project-alpha', 
       title: 'Project Alpha: Advanced GNNs for Financial Forecasting',
       year: "2023",
-      tags: ['#GNN', '#Finance', '#DeepLearning'],
+      tags: ['GNN', 'Finance', 'DeepLearning'],
       fullWriteUp: `
         <p>Project Alpha aimed to revolutionize financial forecasting by leveraging the power of Graph Neural Networks (GNNs). Traditional time-series models often fail to capture the complex interdependencies between financial instruments and market entities. This project proposed a novel GNN architecture that models the stock market as a dynamic graph, where nodes represent assets and edges represent their relationships (e.g., correlations, sector-based connections, supply chain links).</p>
         <h3 class="text-xl font-headline mt-4 mb-2 text-primary">Methodology</h3>
@@ -120,7 +120,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       title: 'Full-Waveform Inversion for Seismic Velocity Prediction',
       year: 'Ongoing',
       supervisorName: 'Naveen Gupta & Divakar Vashisth',
-      tags: ['#FWI', '#SeismicImaging', '#DiffusionModels', '#FlowMatching', '#OptimalTransport'],
+      tags: ['FWI', 'SeismicImaging', 'DiffusionModels', 'FlowMatching', 'OptimalTransport'],
       fullWriteUp: `
         <ul class="list-disc pl-6">
           <li>Extending advisor’s ICLR 2025 latent-space-translation framework for subsurface forward/inverse problem to using Diffusion priors and flow matching.</li>
@@ -135,7 +135,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       title: 'CSD722 Project: Depth-Conditioned Video Generation using ControlNet & AnimateDiff',
       year: 'Jan – May 2026',
       supervisorName: 'Dr. Sumit Shekhar & Dr. Saurabh Shigwan (CSE Dept, SNU)',
-      tags: ['#ControlNet', '#AnimateDiff', '#VideoGeneration', '#DepthConditioning', '#DiffusionModels'],
+      tags: ['ControlNet', 'AnimateDiff', 'VideoGeneration', 'DepthConditioning', 'DiffusionModels'],
       fullWriteUp: `
         <ul class="list-disc pl-6">
           <li>Extended ControlNet to text-to-video diffusion models using AnimateDiff and Motion LoRA.</li>
@@ -151,7 +151,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       year: 'Jun – Dec 2025',
       supervisorName: 'Dr. Shilpi Modi, Sc.’E’',
       supervisorLink: 'https://www.researchgate.net/profile/Shilpi-Modi',
-      tags: ['#sEMG', '#CNN', '#ResNet', '#AlexNet', '#SignalClassification', '#DRDO'],
+      tags: ['sEMG', 'CNN', 'ResNet', 'AlexNet', 'SignalClassification', 'DRDO'],
       fullWriteUp: `
         <p class="text-sm text-muted-foreground mb-3">Institute of Nuclear Medicine and Allied Sciences-DRDO, Ministry of Defence &middot; Machine Learning Research Intern</p>
         <ul class="list-disc pl-6">
@@ -169,7 +169,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
       year: 'Ongoing',
       supervisorName: 'Prof Jyoti Sinha',
       supervisorLink: 'https://rocketreach.co/jyoti-sinha-email_38111920',
-      tags: ['#DroneChallenge', '#ComputerVision', '#RL', '#Autonomy', '#DisasterManagement'],
+      tags: ['DroneChallenge', 'ComputerVision', 'RL', 'Autonomy', 'DisasterManagement'],
       shortAbstract: `Part of the Perception and Autonomy team of the SNU team for the NIDAR Drone Innovation challenge. Working to build Computer vision and RL models for the 'Disaster Management' challenge.`,
       fullWriteUp: `
         <p>Part of the Perception and Autonomy team of the Shiv Nadar University (SNU) team for the NIDAR Drone Innovation Challenge. This project focuses on developing robust computer vision and reinforcement learning models to address the complexities of the 'Disaster Management' challenge track.</p>

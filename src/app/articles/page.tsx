@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const resourceTitles: Record<string, string> = {
+  'enhancing-trust-llms-notes': 'Enhancing trust in LLMs notes',
   'thesis-poster': 'Thesis Poster',
   'speech-tsm-gans': 'Speech Time Scale Modification with GANs',
   'speech-tsm-gans-presentation': 'Speech TSM using GANs - Presentation',
@@ -73,6 +74,7 @@ const tracks = [
       },
     ],
     resources: [
+      'enhancing-trust-llms-notes',
       'explainable-ai',
       'theory-of-llms-notes',
     ],
