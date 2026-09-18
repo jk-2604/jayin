@@ -142,7 +142,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
           <li>Modified model architecture to prevent training collapse where generated videos ignored depth-map conditioning; stabilized training by adding auxiliary supervision losses.</li>
           <li>Conducted ablation experiments on prompts, depth conditioning, and text guidance.</li>
         </ul>`,
-      paperLink: null, githubLink: null, datasetLink: null,
+      paperLink: '/reports/depth_video_gen_presentation.pdf', githubLink: null, datasetLink: null,
       shortAbstract: ''
     },
     {
@@ -160,7 +160,7 @@ async function getProjectData(slug: string): Promise<Project | null> {
           <li>Implemented AlexNet alongside ResNet experiments to further refine accuracy and generalization across sEMG datasets.</li>
           <li>Selected to present this research on stress-level classification at the SUMMIT 2.0 Conference.</li>
         </ul>`,
-      paperLink: null, githubLink: null, datasetLink: null,
+      paperLink: '/reports/sEMG_DL_project_hyperparam_tuning.pdf', githubLink: null, datasetLink: null,
       shortAbstract: ''
     },
     {

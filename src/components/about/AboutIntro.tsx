@@ -104,8 +104,22 @@ const AboutIntro = () => {
         </div>
       </div>
 
-      {/* Current Research */}
+      {/* Publications */}
       <div className="mt-14 border-t border-border pt-10">
+        <h2 className="text-2xl md:text-3xl font-headline text-foreground mb-6">Publications</h2>
+        <div className="border border-border rounded-md p-5 bg-card">
+          <p className="text-sm text-foreground/85">
+            Kumar Shubham, Devendra Vyas, Vidushi Agarwal, Jayin Khanna, Prathosh AP.{' '}
+            <span className="font-medium text-foreground">
+              Repairing the Trustworthiness of Distilled Language Models.
+            </span>{' '}
+            AI4GOOD Workshop @ NeurIPS 2026 [Under Review].
+          </p>
+        </div>
+      </div>
+
+      {/* Current Research */}
+      <div className="mt-10 border-t border-border pt-10">
         <h2 className="text-2xl md:text-3xl font-headline text-foreground mb-6">Current Research</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="border border-border rounded-md p-5 bg-card">
@@ -196,8 +210,26 @@ const AboutIntro = () => {
         <div className="border border-border rounded-md p-5 bg-card">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary/80 mb-3">Honours &amp; Credits</p>
           <ul className="space-y-2 text-base text-foreground/85">
-            <li>Program Batch Topper — SNIoE</li>
-            <li>2nd Prize, Best Thesis — SNIoE</li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/13i87-tmIhcjmb_8I0IzB_Dm7drsekaeH/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline"
+              >
+                Program Batch Topper — SNIoE
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1QZlugsJLmoUqB1r7kUPfDfmEkF4-MJrS/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline"
+              >
+                2nd Prize, Best Thesis — SNIoE
+              </a>
+            </li>
             <li>
               238 credits across 4 years (176 SNIoE + 52 IIT Madras) —{' '}
               <a
