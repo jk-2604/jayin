@@ -32,6 +32,9 @@ const projectsData = [
       'Modified model architecture to prevent training collapse where generated videos ignored depth-map conditioning; stabilized training by adding auxiliary supervision losses',
       'Conducted ablation experiments on prompts, depth conditioning, and text guidance',
     ],
+    resources: [
+      { title: 'CSD 722: Depth Conditioned Video Generation', href: '/reports/depth_video_gen_presentation.pdf' },
+    ],
   },
   {
     slug: 'semg-cnn-classification',
@@ -44,6 +47,9 @@ const projectsData = [
       'Improved classification performance from 91% to 97.98% through architecture redesign and training, showing raw sEMG inputs outperform PyEMGPipeline preprocessing.',
       'Implemented AlexNet alongside ResNet experiments to further refine accuracy and generalization across sEMG datasets.',
       'Selected to present this research on stress-level classification at the SUMMIT 2.0 Conference.',
+    ],
+    resources: [
+      { title: 'sEMG CNN Signal Classification Report', href: '/reports/sEMG_DL_project_hyperparam_tuning.pdf' },
     ],
   },
   {
