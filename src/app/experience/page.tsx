@@ -114,24 +114,6 @@ const experienceData = [
     badges: ['Machine Learning', 'CNN', 'sEMG Classification', 'ResNet', 'RNNs', 'LSTMs']
   },
   {
-    id: 'exp_jk_2',
-    role: 'Machine Learning Research Intern',
-    institution: 'Institute of Nuclear Medicine and Allied Sciences-DRDO, Ministry of Defence',
-    logoSrc: '/images/drdo-inmas-logo.png',
-    logoAlt: 'DRDO INMAS Logo',
-    dataAiHint: 'government research',
-    supervisor: 'Dr. Shilpi Modi',
-    supervisorLink: 'https://www.researchgate.net/profile/Shilpi-Modi',
-    period: 'Present',
-    description: [
-      'Working on the application of network control theory to understand cognitive state transitions in the brain.',
-      'Developing deep learning models to extract insights from diffusion spectrum imaging (DSI) and diffusion tensor imaging (DTI) data.',
-      'Implementing graph neural networks (GNNs) to study the role of hubs and weakly connected regions in cognitive function.'
-    ],
-    links: [],
-    badges: ['Cognitive Neuroscience', 'Deep Learning', 'GNNs', 'DSI/DTI Analysis', 'Network Control Theory']
-  },
-  {
     id: 'exp_jk_3',
     role: 'Statistics Research Intern',
     institution: 'University of California Santa Cruz, CA (ISRP)',
@@ -158,7 +140,7 @@ const experienceData = [
     logoAlt: 'RightProfile Logo',
     dataAiHint: 'tech company',
     supervisor: undefined,
-    period: 'Dec 2024 – Present',
+    period: 'Dec 2024 – March 2024',
     description: [
       'Part of the Research and Development team to develop Computer Vision and Deep Learning models to automate the annotation of 10,000+ raw images.',
       'Conducting R&D on object detection models such as YOLOv8, YOLOv5, Detectron2, and Faster R-CNN to retrain and enhance performance of the existing model.'
@@ -174,7 +156,7 @@ const experienceData = [
     logoAlt: 'The Habitats Trust Logo',
     dataAiHint: 'conservation organization',
     supervisor: undefined,
-    period: 'Dec 2024 – Present',
+    period: 'Dec 2024 – Jan 2024',
     description: [
       'Conducting research and development on modern Computer Vision and object detection models such as MegaDetector, Zamba, and Timelapse to classify and analyze wildlife in camera trap images.',
       'Part of the Tech4Conservation Project.'
