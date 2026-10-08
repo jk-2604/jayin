@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { href: '/projects', label: 'Projects' },
   { href: '/academic-development', label: 'Academic Development' },
   { href: '/achievements', label: 'Achievements' },
+  { href: '/resume', label: 'CV' },
 ];
 
 export const SOCIAL_LINKS = {

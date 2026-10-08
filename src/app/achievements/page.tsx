@@ -3,14 +3,26 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const achievements = [
-  'Received the award for Program Topper of the BSc (Research) in Mathematics, 2026 batch',
-  'Awarded 2nd Prize for the Best Undergraduate Thesis',
-  'Awarded Dean’s List (Monsoon 2025) for ranking among the top-performing students based on academic excellence.',
-  'Summer Research Fellowship at IISc Bangalore — awarded by the Indian Academy of Sciences, INSA, and NASI. Selected among the top 10% nationwide. Received stipend and travel grant.',
+type Achievement = { text: string; url?: string; rest?: string } | 'semg-summit';
+
+const achievements: Achievement[] = [
+  {
+    text: 'Received the award for Program Topper of the BSc (Research) in Mathematics, 2026 batch',
+    url: 'https://drive.google.com/file/d/13i87-tmIhcjmb_8I0IzB_Dm7drsekaeH/view?usp=sharing',
+  },
+  {
+    text: 'Awarded 2nd Prize for the Best Undergraduate Thesis',
+    url: 'https://drive.google.com/file/d/1QZlugsJLmoUqB1r7kUPfDfmEkF4-MJrS/view?usp=sharing',
+  },
+  { text: 'Awarded Dean’s List (Monsoon 2025) for ranking among the top-performing students based on academic excellence.' },
+  {
+    text: 'Summer Research Fellowship at IISc Bangalore',
+    url: 'https://drive.google.com/file/d/1N238yFlXHx9ErYDxrti75Pow-Fdp8Ib0/view?usp=sharing',
+    rest: ' — awarded by the Indian Academy of Sciences, INSA, and NASI. Selected among the top 10% nationwide. Received stipend and travel grant.',
+  },
   'semg-summit',
-  '99.59 Percentile (top 0.5%) in CUET Mathematics Exam 2022 among 2.29 lakh students.',
-  'Certificate of Merit from CBSE for scoring 100% in the CBSE Class X Mathematics Board exams. (Awarded to top 0.1%)',
+  { text: '99.59 Percentile (top 0.5%) in CUET Mathematics Exam 2022 among 2.29 lakh students.' },
+  { text: 'Certificate of Merit from CBSE for scoring 100% in the CBSE Class X Mathematics Board exams. (Awarded to top 0.1%)' },
 ];
 
 const sectionAnimationProps = {
@@ -40,7 +52,21 @@ const AchievementsPage = () => {
                   selected for a presentation in the SUMMIT 2.0 Conference held at Shiv Nadar University.
                 </li>
               ) : (
-                <li key={achievement}>{achievement}</li>
+                <li key={achievement.text}>
+                  {achievement.url ? (
+                    <a
+                      href={achievement.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary font-medium"
+                    >
+                      {achievement.text}
+                    </a>
+                  ) : (
+                    achievement.text
+                  )}
+                  {achievement.rest}
+                </li>
               )
             )}
           </ul>

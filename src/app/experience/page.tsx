@@ -309,7 +309,7 @@ const ExperiencePageContent = () => {
                   {currentExperience.links.map((link, i) => (
                     <Button key={i} asChild variant="link" className="text-accent p-0 h-auto mr-4 mb-1">
                         <a href={link.url} target="_blank" rel="noopener noreferrer">
-                        {link.label} &rarr;
+                        {link.label}
                         </a>
                     </Button>
                   ))}

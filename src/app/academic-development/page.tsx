@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarDays, ExternalLink } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 
 const academicData = [
   {
@@ -40,7 +40,7 @@ const academicData = [
       'Selected from over 3,000 applicants all over India for one of 180 seats. Completed rigorous coursework and led discussions in Linear Algebra, Real Analysis, Proof writing and Number Theory.',
       'Engaged in daily discussions with leading professors and mentored peers during problem-solving sessions.',
     ],
-    links: [{ label: 'Certificate', url: '#' }],
+    links: [{ label: 'Certificate', url: 'https://drive.google.com/file/d/16lPOjLy8N_SdQMgngJUi3gwn-7ZQqXS5/view?usp=sharing' }],
   },
   {
     id: 'ad_talks',
@@ -50,7 +50,7 @@ const academicData = [
     bullets: [
       'Delivered a first-principles, mathematical explanation of VAEs, GANs, and Diffusion Models.',
     ],
-    links: [],
+    links: [{ label: 'Talk Series', url: 'https://drive.google.com/file/d/1PJpiN_EDWALuj90zi96cOvfMRVUYJewJ/view?usp=sharing' }],
   },
   {
     id: 'ad_ta_mat161',
@@ -66,7 +66,7 @@ const academicData = [
     subtitle: null,
     period: 'Aug – Dec 2025',
     bullets: [],
-    links: [],
+    links: [{ label: 'Certificate', url: 'https://drive.google.com/file/d/1tGQ-x11f1ycV019f2gaLrALpwvG4_Tyg/view?usp=sharing' }],
   },
   {
     id: 'ad_thesis_expo',
@@ -76,7 +76,7 @@ const academicData = [
     bullets: [
       'Presented undergraduate thesis to a jury and the Departments of Mathematics and Computer Science; awarded 2nd Prize for Best UG Thesis.',
     ],
-    links: [],
+    links: [{ label: 'Thesis Expo Certificate', url: 'https://drive.google.com/file/d/15NRzEWmPazrjp7EQND-xE2XK9OhxlWKh/view?usp=sharing' }, { label: '2nd Prize Certificate', url: 'https://drive.google.com/file/d/1QZlugsJLmoUqB1r7kUPfDfmEkF4-MJrS/view?usp=sharing' }],
   },
 ];
 
@@ -139,7 +139,7 @@ const AcademicDevelopmentPage = () => {
                     rel="noopener noreferrer"
                     className="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1"
                   >
-                    {link.label} <ExternalLink size={12} />
+                    {link.label}
                   </a>
                 ))}
               </div>

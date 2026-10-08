@@ -165,7 +165,7 @@ const ProjectsPage = () => {
                       rel="noopener noreferrer"
                       className="text-primary text-sm font-medium hover:underline underline-offset-4"
                     >
-                      View &rarr;
+                      View
                     </a>
                   </div>
                 ))}
@@ -177,7 +177,7 @@ const ProjectsPage = () => {
               href={`/projects/${project.slug}/`}
               className="text-primary text-sm font-medium hover:underline underline-offset-4 mt-auto"
             >
-              View Full Project &rarr;
+              View Full Project
             </Link>
           </motion.div>
         ))}

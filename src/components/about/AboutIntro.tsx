@@ -13,6 +13,29 @@ const contactLinks = [
   { label: 'Research Notes', href: '/articles', icon: NotebookText },
 ];
 
+const ME = 'Jayin Khanna';
+
+const publications = [
+  {
+    title: 'Repairing the Trustworthiness of Distilled Language Models',
+    authors: ['Kumar Shubham', 'Devendra Vyas', 'Vidushi Agarwal', 'Jayin Khanna', 'Prathosh AP'],
+    venue: 'AI4GOOD Workshop @ NeurIPS 2026 [Under Review]',
+    note: 'arXiv preprint coming by end of month',
+  },
+  {
+    title: 'Steering Away from Harm: Safety-Contrastive Flow Matching for Inference-Time Correction of Text-to-Image Diffusion Models',
+    authors: ['Jayin Khanna', 'Nasrin Imanpour', 'Renjith Prasad Kaippilly Mana', 'Suranjana Trivedy', 'Amitava Das', 'Amit Sheth'],
+    venue: 'ICLR 2027 [Under Review]',
+    note: 'arXiv preprint coming by end of month',
+  },
+  {
+    title: 'Evaluation of Classical and Deep Learning Speech Time-Scale Modification: A Comparative Study',
+    authors: ['Jayin Khanna', 'Jesuraj Bandekar', 'Prasanta Kumar Ghosh'],
+    venue: '',
+    note: 'arXiv preprint coming by mid-November',
+  },
+];
+
 const AboutIntro = () => {
   return (
     <div>
@@ -106,15 +129,33 @@ const AboutIntro = () => {
 
       {/* Publications */}
       <div className="mt-14 border-t border-border pt-10">
-        <h2 className="text-2xl md:text-3xl font-headline text-foreground mb-6">Publications</h2>
-        <div className="border border-border rounded-md p-5 bg-card">
-          <p className="text-sm text-foreground/85">
-            Kumar Shubham, Devendra Vyas, Vidushi Agarwal, Jayin Khanna, Prathosh AP.{' '}
-            <span className="font-medium text-foreground">
-              Repairing the Trustworthiness of Distilled Language Models.
-            </span>{' '}
-            AI4GOOD Workshop @ NeurIPS 2026 [Under Review].
-          </p>
+        <h2 className="text-2xl md:text-3xl font-headline text-foreground mb-6">Preprints and Publications</h2>
+        <div className="space-y-4">
+          {publications.map((pub) => (
+            <div key={pub.title} className="border border-border rounded-md p-5 bg-card">
+              <h3 className="text-base md:text-lg font-semibold text-foreground leading-snug">{pub.title}</h3>
+              <p className="mt-2 text-sm text-foreground/85">
+                {pub.authors.map((a, i) => (
+                  <span key={a}>
+                    {a === ME ? (
+                      <span className="font-bold underline underline-offset-4 decoration-2 decoration-primary bg-primary/20 text-foreground rounded px-1">
+                        {a}
+                      </span>
+                    ) : (
+                      a
+                    )}
+                    {i < pub.authors.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
+              </p>
+              {pub.venue && <p className="mt-2 text-sm italic text-muted-foreground">{pub.venue}</p>}
+              <p className="mt-3">
+                <span className="inline-flex items-center rounded-full border border-primary bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">
+                  📄 {pub.note}
+                </span>
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 

@@ -56,7 +56,7 @@ const InterpretabilityTheoryPage = () => {
         transition={{ duration: 0.5 }}
         className="mb-12"
       >
-        <Link href="/articles" className="text-sm text-primary hover:underline mb-4 inline-block">
+        <Link href="/articles" className="text-sm text-primary hover:underline mb-4 inline-block no-link-arrow">
           &larr; All Research Tracks
         </Link>
         <h1 className="text-4xl md:text-5xl font-headline mb-4">Safety, Interpretability &amp; Theory of LLMs</h1>
@@ -112,7 +112,7 @@ const InterpretabilityTheoryPage = () => {
             </div>
             <div className="p-6 pt-0">
               <Link href={`/articles/${r.slug}/`} className="text-primary underline-offset-4 hover:underline text-sm font-medium">
-                Read Article &rarr;
+                Read Article
               </Link>
             </div>
           </motion.div>

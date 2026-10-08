@@ -198,3 +198,19 @@
 }
 
     
+/* Inline text links: highlighted so they read as links.
+   Button-style links (rounded) are excluded. */
+a.text-primary:not([class*="rounded"]),
+a.text-accent:not([class*="rounded"]) {
+  text-decoration: none;
+  background-color: hsl(var(--primary) / 0.18);
+  border-radius: 4px;
+  padding: 0 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-color 0.15s ease;
+}
+a.text-primary:not([class*="rounded"]):hover,
+a.text-accent:not([class*="rounded"]):hover {
+  background-color: hsl(var(--primary) / 0.32);
+}

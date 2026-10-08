@@ -244,7 +244,7 @@ const ArticlesLandingPage = () => {
                     href={`/articles/${slug}/`}
                     className="text-primary text-sm font-medium hover:underline underline-offset-4"
                   >
-                    Read &rarr;
+                    Read
                   </Link>
                 </div>
               ))}
@@ -256,7 +256,7 @@ const ArticlesLandingPage = () => {
                 href={`/articles/${track.slug}/`}
                 className="text-primary text-sm font-medium hover:underline underline-offset-4"
               >
-                View Track &rarr;
+                View Track
               </Link>
             </div>
           </motion.div>

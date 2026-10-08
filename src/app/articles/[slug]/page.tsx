@@ -345,7 +345,7 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
 
       <section className="text-center">
         <Button asChild variant="link" className="text-accent text-lg">
-          <Link href="/"> &larr; Back to Home</Link>
+          <Link href="/" className="no-link-arrow"> &larr; Back to Home</Link>
         </Button>
       </section>
     </div>
