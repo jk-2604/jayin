@@ -94,6 +94,11 @@ const AboutIntro = () => {
                   and Flow matching) — their applications and core theory.
                 </li>
                 <li>
+                  <span className="text-primary font-medium">Representation learning for Vision tasks</span>{' '}
+                  (problems and applications that deal with analysing, and using the geometry of
+                  latent spaces)
+                </li>
+                <li>
                   <span className="text-primary font-medium">Interpretability, alignment &amp; safety</span>{' '}
                   in <span className="text-primary font-medium">LLMs</span>
                 </li>
@@ -301,9 +306,13 @@ const AboutIntro = () => {
         <div className="border border-border rounded-md p-5 bg-card">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary/80 mb-3">Exploring and Self Reading</p>
           <ul className="list-disc pl-5 space-y-1.5 text-foreground/80 text-base">
-            <li>Theory of Deep Learning <span className="text-muted-foreground text-sm">(slow steady reading)</span></li>
+            <li>
+              Theory of Deep Learning <span className="text-muted-foreground text-sm">(slow steady reading)</span>
+              {' / '}
+              Geometric Deep Learning <span className="text-muted-foreground text-sm">(pleasure reading)</span>
+            </li>
+            <li>World Models</li>
             <li>Mechanistic Interpretability</li>
-            <li>Geometric Deep Learning</li>
           </ul>
         </div>
       </div>
@@ -321,6 +330,10 @@ const AboutIntro = () => {
             Research page
           </Link>{' '}
           (
+          <Link href="/articles/flow-matching-lecture/" className="text-primary font-medium hover:underline">
+            Flow Matching
+          </Link>
+          ,{' '}
           <Link href="/articles/ddpm-notes/" className="text-primary font-medium hover:underline">
             DDPMs
           </Link>
