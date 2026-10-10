@@ -81,8 +81,49 @@ const tracks = [
   },
   {
     slug: 'ug-thesis',
-    title: 'UG Thesis',
+    title: 'Generative Models for Speech TSM- UG Thesis',
     description: 'My undergraduate thesis on generative models for unsupervised speech time-scale modification, under the joint supervision of Prof. Prasanta Kumar Ghosh (SPIRE Lab, IISc) and Prof. Niteesh Sahni (SNIoE) — won 2nd Prize for Best UG Thesis.',
+    detailSections: [
+      {
+        paragraph:
+          'The traditional models could not learn natural-speech related features from the data and the DL models available did not have robust architectures and even common evaluation metrics and experiments.',
+      },
+      {
+        paragraph:
+          'There was only one DL based TSM model code available online- ScalerGAN: unsupervised based approach using GANs.',
+      },
+      {
+        paragraph: 'I subsequently read all available DL based speech TSM papers-',
+        bullets: ['DiffATSM', 'Neural ATSM', 'TSM-Net'],
+      },
+      {
+        paragraph:
+          'Since the code for these DL-TSM models was unavailable, I wrote the code from scratch implementing as per the paper.',
+      },
+      {
+        paragraph:
+          'Later I realized that most methods above were not grounded in the fundamentals of speech, hence I started understanding the basics of speech TSM- learnt about what guided the formulations of traditional models - OLA, SOLA, WSOLA, PSOLA, HP-TSM, Phase-Vocoder.',
+      },
+      {
+        paragraph:
+          'I started by reproducing the code by retraining the model. I conducted various experiments to check the robustness of the model (ex: checked if the model obeyed phoneme durations, commutative law for rate multiplicity etc).',
+      },
+      {
+        paragraph:
+          'I designed experiments to check robustness to different acoustic conditions: since all models were trained on different datasets, I first trained them all on LJSpeech and then designed a new dataset by adding acoustic degradation to check model performance under real world cases (noisy speech, music with speech, different sampling rates).',
+      },
+      {
+        paragraph:
+          'Inspected multiple mel spectrograms manually and synthesized audios. Conducted 19 experiments to find out the ins and outs of all models across all conditions.',
+      },
+      {
+        paragraph: 'I concluded that Traditional DSP models outperform DL based methods on average.',
+      },
+      {
+        paragraph:
+          'I am devising a new methodology to replace the diffusion model in DiffATSM by rectified flows since they are much faster at inference due to linear ODE trajectories. I am also devising new loss functions for the sub discriminators to model the audio pitch and timbre directly.',
+      },
+    ],
     resources: [
       'thesis-poster',
       'speech-tsm-gans',
@@ -139,7 +180,9 @@ const TrackDescription = ({ track }: { track: (typeof tracks)[number] }) => {
 
   const detailPoints = 'detailPoints' in track ? track.detailPoints : undefined;
   const summaryPoints = 'summaryPoints' in track ? track.summaryPoints : undefined;
-  const detailSections = 'detailSections' in track ? track.detailSections : undefined;
+  const detailSections = 'detailSections' in track
+    ? (track.detailSections as { heading?: string; paragraph?: string; bullets?: string[] }[])
+    : undefined;
 
   if (!detailPoints && !detailSections) {
     return <p>{track.description}</p>;
@@ -168,8 +211,10 @@ const TrackDescription = ({ track }: { track: (typeof tracks)[number] }) => {
       {expanded && detailSections && (
         <div className="mt-3 space-y-4">
           {detailSections.map((section) => (
-            <div key={section.heading}>
-              <p className="text-sm font-semibold underline mb-1">{section.heading}</p>
+            <div key={section.heading ?? section.paragraph}>
+              {section.heading && (
+                <p className="text-sm font-semibold underline mb-1">{section.heading}</p>
+              )}
               {section.paragraph && <p className="text-sm">{section.paragraph}</p>}
               {section.bullets && (
                 <ul className="list-disc pl-5 space-y-1 text-sm">

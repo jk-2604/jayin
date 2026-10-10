@@ -30,7 +30,7 @@ const UGThesisPage = () => {
         <Link href="/articles" className="text-sm text-primary hover:underline mb-4 inline-block no-link-arrow">
           &larr; All Research Tracks
         </Link>
-        <h1 className="text-4xl md:text-5xl font-headline mb-4">UG Thesis</h1>
+        <h1 className="text-4xl md:text-5xl font-headline mb-4">Generative Models for Speech TSM- UG Thesis</h1>
         <p className="text-lg text-foreground/85 leading-relaxed max-w-3xl">
           My undergraduate thesis on{' '}
           <Link href="/articles/thesis-poster/" className="text-primary font-medium hover:underline">
